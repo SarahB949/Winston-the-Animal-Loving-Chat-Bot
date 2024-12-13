@@ -1,0 +1,36 @@
+import random
+
+def animal_chatbot():
+    # Dictionary of questions and funny answers
+    qa_pairs = {
+        "what is your name?": "I am Winston Python!",
+        "what is my name?": "I'm not a flipping mind reader, I'm only a chat bot",
+        "why do cows wear bells?": "Because their horns don't work!",
+        "why don’t seagulls fly over the bay?": "Because then they’d be bagels!",
+        "what do you call a bear with no teeth?": "A gummy bear!",
+        "why do fish live in saltwater?": "Because pepper makes them sneeze!",
+        "why are frogs so happy?": "Because they eat whatever bugs them!",
+        "what do you call a sleeping bull?": "A bulldozer!",
+        "why did the scarecrow win an award?": "Because he was outstanding in his field!",
+        "what do you call an alligator in a vest?": "An investigator!",
+        "why don’t elephants use computers?": "Because they’re afraid of the mouse!",
+        "what do you call a penguin in the desert?": "Lost!",
+        "why are cats bad storytellers?": "Because they only have one tail!",
+        "what do you get when you cross a snake and a pie?": "A python!"
+    }
+
+    print("Hello! I'm Winston, your annoyingly friendly, fun-loving chat bot. Ask me a funny question about animals or type 'oh go away!' to quit.")
+
+    while True:
+        user_input = input("You: ").strip().lower()
+
+        if user_input == 'oh go away':
+            print("Chatbot: Goodbye, Legend!")
+            break
+
+        # Standardise the keys and check if the user input matches any question
+        response = qa_pairs.get(user_input, "Ohhhh, I don't know that one. Try asking something else!")
+        print(f"Chatbot: {response}")
+
+if __name__ == "__main__":
+    animal_chatbot()
